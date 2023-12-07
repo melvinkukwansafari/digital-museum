@@ -1,0 +1,13 @@
+{
+    "artifacts": [
+      {"id": 1, "name": "Artifact 1", "description": "Description 1"},
+      {"id": 2, "name": "Artifact 2", "description": "Description 2"}
+    ],
+    "gallery": [
+      {"id": 1, "image": "image1.jpg", "caption": "Caption 1"},
+      {"id": 2, "image": "image2.jpg", "caption": "Caption 2"}
+    ]
+
+}
+
+  
