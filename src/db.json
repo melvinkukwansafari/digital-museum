@@ -3,10 +3,15 @@
       {"id": 1, "name": "Artifact 1", "description": "Description 1"},
       {"id": 2, "name": "Artifact 2", "description": "Description 2"}
     ],
+   
+
     "gallery": [
-      {"id": 1, "image": "image1.jpg", "caption": "Caption 1"},
-      {"id": 2, "image": "image2.jpg", "caption": "Caption 2"}
+      {"id": 1, "type": "photo", "media": "image1.jpg", "caption": "Caption 1"},
+      {"id": 2, "type": "photo", "media": "image2.jpg", "caption": "Caption 2"},
+      {"id": 3, "type": "video", "media": "https://www.youtube.com/watch?v=video1", "caption": "Video Caption 1"},
+      {"id": 4, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 2"}
     ]
+  
 
 }
 
