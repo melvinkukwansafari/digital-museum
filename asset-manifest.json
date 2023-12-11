@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8a422fb3.css",
+    "main.js": "/static/js/main.cf9dcc43.js",
+    "static/js/787.371320eb.chunk.js": "/static/js/787.371320eb.chunk.js",
+    "static/media/woman.jpg": "/static/media/woman.390690cb0fb6820bf32c.jpg",
+    "static/media/samburu-hand-knife.jpg": "/static/media/samburu-hand-knife.fb0e04ac8269ad19f5a5.jpg",
+    "static/media/flowers.jpg": "/static/media/flowers.85e993ee9bbb089a70dd.jpg",
+    "static/media/moran.jpg": "/static/media/moran.94976ca338d36a17d30f.jpg",
+    "static/media/samburu.jpg": "/static/media/samburu.48ff78065e2ad70cd0a8.jpg",
+    "index.html": "/index.html",
+    "main.8a422fb3.css.map": "/static/css/main.8a422fb3.css.map",
+    "main.cf9dcc43.js.map": "/static/js/main.cf9dcc43.js.map",
+    "787.371320eb.chunk.js.map": "/static/js/787.371320eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a422fb3.css",
+    "static/js/main.cf9dcc43.js"
+  ]
+}
