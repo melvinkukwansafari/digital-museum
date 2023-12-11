@@ -26,7 +26,7 @@ const Home = () => {
               <button className="btn btn-primary">
                 Who We are
                 <br />
-                Learn more about us
+                Learn more about us.
               </button>
             </Link>
 
