@@ -1,16 +1,20 @@
 // Example export
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 const Gallery = () => {
   const [galleryData, setGalleryData] = useState([]);
 
-  // Local variable with gallery data
-  const localGalleryData = [
+  // Use useMemo to memoize the localGalleryData value
+  const localGalleryData = useMemo(() => [
     {"id": 1, "type": "photo", "media": "image1.jpg", "caption": "Caption 1"},
     {"id": 2, "type": "photo", "media": "image2.jpg", "caption": "Caption 2"},
-    {"id": 3, "type": "video", "media": "https://www.youtube.com/watch?v=video1", "caption": "Video Caption 1"},
-    {"id": 4, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 2"}
-  ];
+    {"id": 3, "type": "photo", "media": "image2.jpg", "caption": "Caption 3"},
+    {"id": 4, "type": "photo", "media": "image2.jpg", "caption": "Caption 4"},
+    {"id": 5, "type": "video", "media": "https://www.youtube.com/watch?v=video1", "caption": "Video Caption 1"},
+    {"id": 6, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 2"},
+    {"id": 7, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 3"}
+  ], []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,39 +34,43 @@ const Gallery = () => {
     };
 
     fetchData();
-  }, []);
+  }, [localGalleryData]);
 
   return (
-    <div>
-      {galleryData.map(item => (
-        <div key={item.id}>
-          {item.type === 'photo' && (
-            <div>
-              <img src={item.media} alt={item.caption} />
-              <p>{item.caption}</p>
-            </div>
-          )}
-          {item.type === 'video' && (
-            <div>
-              <iframe
-                title={item.caption}
-                width="560"
-                height="315"
-                src={item.media.replace('watch?v=', 'embed/')}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <p>{item.caption}</p>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+    <Container className="d-flex justify-content-center align-items-center">
+      <Row xs={1} md={2} lg={3} className="g-4">
+        {galleryData.map(item => (
+          <Col key={item.id}>
+            <Card>
+              {item.type === 'photo' && (
+                <Card.Img variant="top" src={item.media} alt={item.caption} />
+              )}
+              {item.type === 'video' && (
+                <iframe
+                  title={item.caption}
+                  width="100%"
+                  height="200"
+                  src={item.media.replace('watch?v=', 'embed/')}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
+              <Card.Body>
+                <Card.Title>{item.caption}</Card.Title>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };
 
 export default Gallery;
+
+
+
 
 
   
