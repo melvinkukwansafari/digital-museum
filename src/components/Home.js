@@ -9,6 +9,7 @@ import './Home.css';
 import AboutUs from './AboutUs';
 import Museum from './Museum'
 import Gallery from './Gallery'
+import GiftShop from './GiftShop';
 
 const Home = () => {
   return (
@@ -49,6 +50,8 @@ const Home = () => {
           <AboutUs />
           <Museum />
           <Gallery />
+          <GiftShop />
+
         </div>
       </div>
     </div>

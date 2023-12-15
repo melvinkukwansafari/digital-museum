@@ -6,6 +6,7 @@ import AboutUs from './components/AboutUs';
 //import Contact from './components/Contact';
 import Museum from './components/Museum';
 import Gallery from './components/Gallery';
+import GiftShop from './components/GiftShop';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -43,6 +44,16 @@ const App = () => {
           element={
             <Layout>
               <Gallery />
+            </Layout>
+          }
+        />
+
+        
+      <Route
+          path="/giftshop"
+          element={
+            <Layout>
+              <GiftShop />
             </Layout>
           }
         />
