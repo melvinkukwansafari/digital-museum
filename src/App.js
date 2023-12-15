@@ -7,6 +7,8 @@ import AboutUs from './components/AboutUs';
 import Museum from './components/Museum';
 import Gallery from './components/Gallery';
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import Stripe from './components/Stripe';
+import GiftShop from './components/GiftShop';
 
 const App = () => {
   return (
@@ -46,6 +48,17 @@ const App = () => {
             </Layout>
           }
         />
+
+        <Route
+          path="/giftshop"
+          element={
+            <Layout>
+              
+                <GiftShop />
+              
+            </Layout>
+          }
+        />    
 
       </Routes>
     </Router>
