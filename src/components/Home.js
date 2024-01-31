@@ -10,6 +10,7 @@ import AboutUs from './AboutUs';
 import Museum from './Museum'
 import Gallery from './Gallery'
 import GiftShop from './GiftShop';
+import Bookings from './Bookings';
 
 const Home = () => {
   return (
@@ -23,13 +24,15 @@ const Home = () => {
 
           {/* Add buttons to navigate to different pages */}
           <div className="button-container">
-            <Link to="/about">
+          { /* <Link to="/about">
               <button className="btn btn-primary">
-                Who We are
+                Who we are
                 <br />
                 Learn more about us.
               </button>
-            </Link>
+  </Link> */}
+
+            <AboutUs /> 
 
             <Link to="/museum">
               <button className="btn btn-primary">
@@ -41,16 +44,12 @@ const Home = () => {
 
             <Link to="/gallery">
               <button className="btn btn-primary">
-                Gallery
+                Take a look and
                 <br />
-                View our art gallery
+                explore our arts gallery
               </button>
             </Link>
           </div>
-          <AboutUs />
-          <Museum />
-          <Gallery />
-          <GiftShop />
 
         </div>
       </div>

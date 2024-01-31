@@ -1,15 +1,33 @@
+.card-title {
+  color: black;
+  text-align: center;
+}
+
 .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Optional: Align buttons in the center horizontally */
-  }
-  
-  .button-container a {
-    margin-bottom: 10px; /* Optional: Adjust the spacing between buttons */
-  }
-  
-  /* Additional styling for buttons */
-  .btn {
-    width: 200px; /* Optional: Set a fixed width for the buttons */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Center the buttons horizontally */
+}
+
+.button-container button {
+  background-color: #007bff;
+  color: #fff;
+  margin-bottom: 10px; /* Optional: Add some spacing between buttons */
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.button-container button span {
+  display: block;
+}
+
+.button-container button::after {
+  content: 'Click me';
+  display: block;
+  font-size: 0.8em;
+  margin-top: 5px;
+}

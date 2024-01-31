@@ -1,14 +1,25 @@
-// GiftShop.js
 import React from 'react';
+import ArtifactItem from './ArtifactItem';
 
-const GiftShop = () => {
+const App = () => {
+  const handleBuyClick = () => {
+    // Handle buy/like action
+    console.log('Item bought or liked!');
+  };
+
   return (
     <div>
-      {/* Your Gift Shop component content */}
-      <h2>Gift Shop</h2>
-      {/* ... */}
+      <ArtifactItem
+        imageSrc="path/to/your/image.jpg"
+        price="$100"
+        description="An ancient artifact with a rich history."
+        dateAcquired="January 1, 2022"
+        onBuyClick={handleBuyClick}
+      />
+      {/* Add more ArtifactItem components as needed */}
     </div>
   );
 };
 
-export default GiftShop;
+export default App;
+

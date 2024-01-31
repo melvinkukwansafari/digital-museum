@@ -7,6 +7,8 @@ import AboutUs from './components/AboutUs';
 import Museum from './components/Museum';
 import Gallery from './components/Gallery';
 import GiftShop from './components/GiftShop';
+import Bookings from './components/Bookings';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -21,14 +23,14 @@ const App = () => {
             </Layout>
           }
         />
-        <Route
+        {/*<Route
           path="/about"
           element={
             <Layout>
               <AboutUs />
             </Layout>
           }
-        />
+        />*/}
        
         <Route
           path="/museum"
@@ -54,6 +56,15 @@ const App = () => {
           element={
             <Layout>
               <GiftShop />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/bookings"
+          element={
+            <Layout>
+              <Bookings />
             </Layout>
           }
         />
