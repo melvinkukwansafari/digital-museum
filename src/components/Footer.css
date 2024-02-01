@@ -1,44 +1,28 @@
 /* Footer.css */
 .slide-container {
     display: flex;
+    justify-content: center; /* Center the logos horizontally */
+    align-items: center; /* Center the logos vertically */
     overflow-x: hidden;
+    margin-top: 10px; /* Adjust the margin as needed */
   }
   
   .slide-container img {
-    margin-right: 10px; /* Adjust the margin as needed */
-    max-height: 40px; /* Set the maximum height for the logos */
-    transition: transform 0.3s ease-in-out;
+    margin-right: 35px; /* Adjust the margin as needed */
+    max-height: 55px; /* Set the maximum height for the logos */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the scale effect */
   }
   
   .slide-container img:hover {
     transform: scale(1.1); /* Adjust the scale factor for the hover effect */
+    animation: animate__animated animate__bounce; /* Add bouncing effect on hover */
   }
   
-  /* Control Button Styles */
-  .btn-light {
-    background-color: #f8f9fa;
-    color: #212529;
-    border: 1px solid #dee2e6;
-    padding: 5px 10px; /* Adjust padding as needed */
-    font-size: 0; /* Hide the text */
-  }
-  
-  .btn-light::before {
-    content: 'Slide Left';
-    display: inline-block;
-    font-size: 14px; /* Adjust font size as needed */
-  }
-  
-  .btn-light::after {
-    content: 'Slide Right';
-    display: inline-block;
-    font-size: 14px; /* Adjust font size as needed */
-  }
-  
-  /* Show text on hover */
-  .btn-light:hover::before,
-  .btn-light:hover::after {
-    font-size: 14px; /* Adjust font size as needed */
+  /* Partner Header Style */
+  .text-uppercase {
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-bottom: 10px;
   }
   
   

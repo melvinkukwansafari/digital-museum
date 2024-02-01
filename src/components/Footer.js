@@ -1,5 +1,5 @@
-// src/components/Footer.js
-import React, { useRef } from 'react';
+// Footer.js
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import university from './university.png';
@@ -9,28 +9,17 @@ import swedish from './swedish.png';
 import './Footer.css';
 
 const Footer = () => {
-  const slideContainerRef = useRef(null);
-
-  const handleSlide = (direction) => {
-    const slideContainer = slideContainerRef.current;
-    const slideAmount = 100; // Adjust the slide amount as needed
-
-    if (slideContainer) {
-      const currentScrollLeft = slideContainer.scrollLeft;
-      const newScrollLeft =
-        direction === 'left' ? currentScrollLeft - slideAmount : currentScrollLeft + slideAmount;
-
-      slideContainer.scrollTo({
-        left: newScrollLeft,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <footer className="bg-dark text-white p-4">
       <div className="container text-center">
-        <p className="mb-0">&copy; Samburu Digital Museum</p>
+        {/* Slide Motion Effect */}
+        <h5 className="text-uppercase mb-3">Our Partners</h5>
+        <div className="slide-container">
+          <img src={university} alt="university" className="university" />
+          <img src={museum} alt="museum" className="museum" />
+          <img src={empower} alt="empower" className="empower" />
+          <img src={swedish} alt="swedish" className="swedish" />
+        </div>
 
         {/* Social Icons */}
         <div className="social-icons mt-3">
@@ -47,23 +36,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
 
-          {/* Slide Motion Effect */}
-          <div className="slide-container" ref={slideContainerRef}>
-            <img src={university} alt="university" className="university" />
-            <img src={museum} alt="museum" className="museum" />
-            <img src={empower} alt="empower" className="empower" />
-            <img src={swedish} alt="swedish" className="swedish" />
-          </div>
-
-          {/* Control Buttons */}
-          <div className="mt-3">
-            <button onClick={() => handleSlide('left')} className="btn btn-light mr-2">
-              Slide Left
-            </button>
-            <button onClick={() => handleSlide('right')} className="btn btn-light">
-              Slide Right
-            </button>
-          </div>
+          <p className="mb-0">&copy; Samburu Digital Museum</p>
         </div>
       </div>
     </footer>
@@ -72,8 +45,3 @@ const Footer = () => {
 
 export default Footer;
 
-
-
-
-
-  
