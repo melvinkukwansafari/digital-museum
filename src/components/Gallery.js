@@ -7,11 +7,11 @@ const Gallery = () => {
 
   // Use useMemo to memoize the localGalleryData value
   const localGalleryData = useMemo(() => [
-    {"id": 1, "type": "photo", "media": require("./images/image1.jpg"), "caption": "Caption 1"},
+    {"id": 1, "type": "photo", "media": require("./images/rock.JPG"), "caption": "Caption 1"},
 
-    {"id": 2, "type": "photo", "media": require("./images/bitch.jpg"), "caption": "Caption 2"},
-    {"id": 3, "type": "photo", "media": require("./images/group.jpg"), "caption": "Caption 3"},
-    {"id": 4, "type": "photo", "media": "image2.jpg", "caption": "Caption 4"},
+    {"id": 2, "type": "photo", "media": require("./images/baobab.png"), "caption": "Caption 2"},
+    {"id": 3, "type": "photo", "media": require("./images/mzunye.jpg"), "caption": "Caption 3"},
+    {"id": 4, "type": "photo", "media": require("./images/maua.JPG"), "caption": "Caption 4"},
     {"id": 5, "type": "video", "media": "https://www.youtube.com/watch?v=video1", "caption": "Video Caption 1"},
     {"id": 6, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 2"},
     {"id": 7, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 3"}

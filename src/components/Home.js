@@ -21,6 +21,8 @@ const Home = () => {
             {/* Your existing content */}
           </p>
 
+          <AboutUs />
+
           {/* Add buttons to navigate to different pages */}
           <div className="button-container">
             <Link to="/about">
@@ -47,10 +49,7 @@ const Home = () => {
               </button>
             </Link>
           </div>
-          <AboutUs />
-          <Museum />
-          <Gallery />
-          <GiftShop />
+
         </div>
       </div>
     </div>

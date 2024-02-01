@@ -1,0 +1,11 @@
+/* About.css */
+
+.card {
+    background-color: transparent; /* Set the background color to be colorless */
+    border: none; /* Remove any borders if needed */
+  }
+  
+  .card-title {
+    color: #000; /* Set the text color to dark */
+  }
+  
