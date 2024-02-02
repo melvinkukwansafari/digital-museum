@@ -7,6 +7,16 @@
   min-height: 100vh;
 }
 
+.loading {
+  font-size: 100px;
+  color: #007bff; /* Blue color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Make sure it covers the entire height of the screen */
+}
+
+
 .main-content {
     min-height: calc(100vh - (height of your header));
   flex: 1;

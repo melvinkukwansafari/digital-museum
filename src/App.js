@@ -8,6 +8,8 @@ import Gallery from './components/Gallery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GiftShop from './components/GiftShop';
 import ProductList from './components/ProductList';
+import Bookings from './components/Bookings';
+
 //import '.components/Styles.css';
 
 const App = () => {
@@ -20,7 +22,7 @@ const App = () => {
       description: 'Description 1',
       age: 25,
       price: 19.99,
-      imageUrl: 'https://example.com/image1.jpg',
+      imageUrl: 'https://th.bing.com/th/id/R.236e0072c76ee61cfa008bfe7510fb34?rik=A%2bb2tWdKe3oHGA&riu=http%3a%2f%2fppcteotihuacan.org%2fwp-content%2fuploads%2f2017%2f05%2f50_artifacts-1024x813.png&ehk=M8S5zrcCS%2f7%2f8tRFeGRiHnLNfovmFZ0UUeAAXfGcGok%3d&risl=&pid=ImgRaw&r=0',
     },
     {
       id: 2,
@@ -28,7 +30,16 @@ const App = () => {
       description: 'Description 2',
       age: 30,
       price: 29.99,
-      imageUrl: 'https://example.com/image2.jpg',
+      imageUrl: 'https://th.bing.com/th/id/OIP.LZ-LasOikPuZi1zjoIh5PgAAAA?rs=1&pid=ImgDetMain',
+    },
+
+    {
+      id: 3,
+      name: 'Product 3',
+      description: 'Description 3',
+      age: 30,
+      price: 29.99,
+      imageUrl: 'https://th.bing.com/th?id=OIF.n4rJvzPbymbvy%2bM35JSbow&rs=1&pid=ImgDetMain',
     },
     // ... more objects
   ];
@@ -79,6 +90,15 @@ const App = () => {
             </Layout>
           }
         /> 
+         <Route
+          path="/bookings"
+          element={
+            <Layout>
+              <Bookings />
+            </Layout>
+          }
+        />
+
       </Routes>
     </Router>
   );
