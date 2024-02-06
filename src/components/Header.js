@@ -50,7 +50,7 @@ const Header = () => {
           
           <li><Link to="/museum">Museum</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
-          <li><Link to="/bookings">Bookings</Link></li>
+          <li><Link to="/bookings">Visit Samburu</Link></li>
           <li><Link to="/giftshop">Gift Shop</Link></li>
 
           

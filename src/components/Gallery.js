@@ -12,9 +12,12 @@ const Gallery = () => {
     {"id": 2, "type": "photo", "media": require("./images/baobab.png"), "caption": "Caption 2"},
     {"id": 3, "type": "photo", "media": require("./images/mzunye.jpg"), "caption": "Caption 3"},
     {"id": 4, "type": "photo", "media": require("./images/maua.JPG"), "caption": "Caption 4"},
-    {"id": 5, "type": "video", "media": "https://www.youtube.com/watch?v=video1", "caption": "Video Caption 1"},
-    {"id": 6, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 2"},
-    {"id": 7, "type": "video", "media": "https://www.youtube.com/watch?v=video2", "caption": "Video Caption 3"}
+    {"id": 4, "type": "photo", "media": require("./images/rock art.jpg"), "caption": "Caption 5"},
+    {"id": 4, "type": "photo", "media": require("./images/mzee.jpg"), "caption": "Caption 6"},
+    {"id": 4, "type": "photo", "media": require("./images/wawili.JPG"), "caption": "Caption 7"},
+    {"id": 4, "type": "photo", "media": require("./images/rock1.jpg"), "caption": "Caption 8"},
+    {"id": 4, "type": "photo", "media": require("./images/wasii.JPG"), "caption": "Caption 9"},
+    {"id": 4, "type": "photo", "media": require("./images/cave.JPG"), "caption": "Caption 10"}
   ], []);
 
   useEffect(() => {
