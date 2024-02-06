@@ -26,7 +26,7 @@ const Bookings = () => {
 
   return (
     <div className="bookings-container">
-      <h1>Bookings</h1>
+      <h1>Visit Samburu</h1>
       <BookingForm onSubmit={addBooking} />
     </div>
   );

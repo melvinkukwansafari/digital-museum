@@ -14,7 +14,7 @@ const Home = () => {
     <div className="container mt-4">
       <div className="card bg-transparent text-white">
         <div className="card-body">
-          <h1 className="card-title">Welcome to Samburu Digital Museum</h1>
+          <h1 className="card-title">Welcome to Samburu Digital Museum of Rock Art.</h1>
           <p className="card-text">
             {/* Your existing content */}
           </p>

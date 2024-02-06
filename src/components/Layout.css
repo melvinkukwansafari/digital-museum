@@ -28,7 +28,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./edited.jpeg');
+  background-image: url('./cover.jpg');
   background-size: cover;
   background-attachment: fixed;
     /* Apply brightness filter */

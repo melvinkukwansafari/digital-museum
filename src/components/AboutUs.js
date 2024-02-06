@@ -6,11 +6,11 @@ const AboutUs = () => {
   return (
     <div className="container mt-4">
       {/* Use Bootstrap Card component */}
-      <Card bg="white" text="dark" className="font-weight-bold">
+      <Card bg="transparent" text="black" className="font-weight-bold">
         <Card.Body className="d-flex flex-column align-items-center">
           <Card.Title className="text-center mb-4">About Us</Card.Title>
           {/* Your AboutUs component content */}
-          <p className="text-left">
+          <p className="text-left increased-font-size">
           A Digital Museum for Digital History.
 Samburu Digital Museum is a collection of images, text documents and recorded oral stories of the ongoing rock art tradition and the cultural heritage Samburu community living in Northern Kenya.
 

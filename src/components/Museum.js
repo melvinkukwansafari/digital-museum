@@ -1,82 +1,76 @@
-import React, { useState, useEffect } from 'react';
-import Image1 from './flowers.jpg'; // Import the image file
-import Image2 from './samburu-hand-knife.jpg';
-import Image3 from './moran.jpg';
-const Museum = () => {
-  const [artifacts, setArtifacts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+import React, { useState, useEffect, useMemo } from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
+const Gallery = () => {
+  const [galleryData, setGalleryData] = useState([]);
+
+  // Use useMemo to memoize the localGalleryData value
+  const localGalleryData = useMemo(() => [
+    {"id": 5, "type": "video", "media": "https://www.youtube.com/embed/se442vo2AaI", "caption": "An samburu native explaining his own rock art"},
+    {"id": 6, "type": "video", "media": "https://www.youtube.com/embed/P90oTbPLf4I", "caption": "Community engagement"},
+    {"id": 7, "type": "video", "media": "https://www.youtube.com/embed/mbqCXpmo15A", "caption": "Video Caption"}
+  ], []);
   
 
   useEffect(() => {
-    const localArtifactsData = [
-      {
-        "id": 1,
-        "name": "Natural Adherence",
-        "description": "Samburu got and adopt ways to live with the wild and up to this age still practising it",
-        "category": "mammalia",
-        "image": Image3
-      },
-      {
-        "id": 2,
-        "name": "Samburu Flowers",
-        "description": "This is a flower occuring from acacia plants. A dry land tree with thorns but beatiful flowers",
-        "category": "plants",
-        "image": Image1 // Use the imported image
-      },
-      {
-        "id": 3,
-        "name": "Samburu-hand-knife",
-        "description": "This is a tool that was used by samburu people, as it was helpful to them with activity like; Goat eating, gathering and circumcision",
-        "category": "arts",
-        "image": Image2 // Use the imported image
-      }
-      // Add more artifacts with different categories and images
-    ];
-    // Set artifacts directly from local data
-    setArtifacts(localArtifactsData);
-  }, []); // Include localArtifactsData in the dependency array
+    const fetchData = async () => {
+      try {
+        // Simulate fetching data from an external source (e.g., JSON server)
+        // For demonstration purposes, you can comment out this block when using real data
+        // const response = await fetch('http://localhost:3001/gallery');
+        // const data = await response.json();
 
-  const filteredArtifacts = selectedCategory === 'all'
-    ? artifacts
-    : artifacts.filter(artifact => artifact.category === selectedCategory);
+        // For demonstration, use local variable instead of external data
+        const data = localGalleryData;
+
+        setGalleryData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, [localGalleryData]);
 
   return (
-    <div className="container mt-4">
-      <label>
-        Select Category:
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="form-control"
-        >
-          <option value="all">All</option>
-          <option value="mammalia">Mammalia</option>
-          <option value="plants">Plants</option>
-          <option value="arts">Arts</option>
-          {/* Add more categories as needed */}
-        </select>
-      </label>
-
-      <h2 className="mt-3">Enjoy Our Museum</h2>
-      <div className="row">
-        {filteredArtifacts.map((artifact) => (
-          <div key={artifact.id} className="col-md-12 mb-3"> {/* Use col-md-12 to take up the full width */}
-            <div className="card">
-              <img src={artifact.image} className="card-img-top" alt={`Artifact ${artifact.id}`} />
-              <div className="card-body">
-                <h5 className="card-title">{artifact.name}</h5>
-                <p className="card-text">{artifact.description}</p>
-              </div>
-            </div>
-          </div>
+    <Container className="d-flex justify-content-center align-items-center">
+      <Row xs={1} md={2} lg={3} className="g-4">
+        {galleryData.map(item => (
+          <Col key={item.id}>
+            <Card>
+              {item.type === 'photo' && (
+                <Card.Img variant="top" src={item.media} alt={item.caption} />
+              )}
+              {item.type === 'video' && (
+                <iframe
+                  title={item.caption}
+                  width="100%"
+                  height="200"
+                  src={item.media}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
+              <Card.Body>
+                <Card.Title>{item.caption}</Card.Title>
+              </Card.Body>
+            </Card>
+          </Col>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 };
 
-export default Museum;
+export default Gallery;
+
+
+
+
+
+
+  
 
 
 
